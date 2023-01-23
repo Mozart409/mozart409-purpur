@@ -16,17 +16,19 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Java is needed to run the server. Wget is needed to download the server files. Optional but useful is the build tool make.
+Java is needed to run the server. Wget is needed to download the server files. Optional but useful is the build tool <a href="https://www.gnu.org/software/make/">make</a>.
+
+```sh
+git clone https://github.com/Mozart409/mozart409-purpur.git
+```
+
+## Usage <a name = "usage"></a>
+
+To download the server files
 
 ```sh
 make server
 ```
-
-to download the server files.
-
-End with an example of getting some data out of the system or using it for a little demo.
-
-## Usage <a name = "usage"></a>
 
 To start the server run
 
