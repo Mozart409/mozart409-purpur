@@ -5,16 +5,16 @@ After=network.target
 [Service]
 User=root
 WorkingDirectory=/root/mozart409-purpur/server
-Restart=always
+Restart=unless-stopped
 
-ExecStart=/usr/bin/screen -DmS purpur /usr/bin/java -Xms1G -Xmx2G -jar paper.jar --nogui
+ExecStart=/usr/bin/screen -DmS root /usr/bin/java -Xms1G -Xmx2G -jar paper.jar --nogui
 
-ExecStop=/usr/bin/screen -p 0 -S purpur -X stuff "say SERVER SHUTTING DOWN IN 10 SECONDS. SAVING ALL MAPS...\n"
-ExecStop=/usr/bin/screen -p 0 -S purpur -X stuff "save-all\n"
+ExecStop=/usr/bin/screen -p 0 -S root -X stuff "say SERVER SHUTTING DOWN IN 10 SECONDS. SAVING ALL MAPS...\n"
+ExecStop=/usr/bin/screen -p 0 -S root -X stuff "save-all\n"
 ExecStop=/bin/sleep 10s
-ExecStop=/usr/bin/screen -p 0 -s purpur -X stuff "say Maps saved, shutting down in 5 seconds...\n"
+ExecStop=/usr/bin/screen -p 0 -s root -X stuff "say Maps saved, shutting down in 5 seconds...\n"
 ExecStop=/bin/sleep 5s
-ExecStop=/usr/bin/screen -p 0 -S purpur -X stuff "stop\n"
+ExecStop=/usr/bin/screen -p 0 -S root -X stuff "stop\n"
 
 [Install]
 WantedBy=multi-user.target
