@@ -18,7 +18,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 Java is needed to run the server. Wget is needed to download the server files. Optional but useful is the build tool make.
 
-```
+```sh
 make server
 ```
 
@@ -30,6 +30,14 @@ End with an example of getting some data out of the system or using it for a lit
 
 To start the server run
 
-```
+```sh
 server/server.sh
 ```
+
+To clear the server folder and all files run
+
+```sh
+make rimraf
+```
+
+Have fun!
