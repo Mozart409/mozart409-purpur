@@ -4,8 +4,6 @@ After=network.target
 
 [Service]
 Type=simple
-User=root
-WorkingDirectory=/root/mozart409-purpur/server
 
 StartLimitIntervalSec=400
 StartLimitBurst=3
@@ -13,7 +11,7 @@ StartLimitBurst=3
 Restart=always
 RestartSec=90
 
-ExecStart=/usr/bin/java -Xms1G -Xmx2G -jar paper.jar --nogui
+ExecStart=/root/mozart409-purpur/server/server.sh
 KillSignal=SIGINT
 SuccessExitStatus=INT SIGINT 130
 
