@@ -13,7 +13,7 @@ StartLimitBurst=3
 Restart=always
 RestartSec=90
 
-ExecStart=/usr/bin/screen -DmS root /usr/bin/java -Xms1G -Xmx2G -jar paper.jar --nogui
+ExecStart=/usr/bin/java -Xms1G -Xmx2G -jar paper.jar --nogui
 KillSignal=SIGINT
 SuccessExitStatus=INT SIGINT 130
 
