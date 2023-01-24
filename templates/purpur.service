@@ -4,16 +4,11 @@ After=network.target
 
 [Service]
 Type=simple
-
-StartLimitIntervalSec=400
-StartLimitBurst=3
-
-Restart=always
-RestartSec=90
-
-ExecStart=/root/mozart409-purpur/server/server.sh
-KillSignal=SIGINT
-SuccessExitStatus=INT SIGINT 130
+User=root
+Restart=on-failure
+RestartSec=10
+WorkingDirectory=/root/mozart409-pupur/server
+ExecStart=/usr/bin/java --add-modules=jdk.incubator.vector -Xms1G -Xmx2G -jar paper.jar --nogui
 
 [Install]
 WantedBy=multi-user.target
