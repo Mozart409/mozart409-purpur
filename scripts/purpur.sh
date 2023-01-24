@@ -50,3 +50,6 @@ wget https://github.com/ThizThizzyDizzy/tree-feller/releases/download/v1.19.3/Tr
 
 echo "Downloading Scythe..."
 wget https://cdn.modrinth.com/data/SiaCYfuX/versions/Yp50ZsIb/Scythe-3.1.jar
+
+echo "Downloading Chunky..."
+wget https://cdn.modrinth.com/data/fALzjamp/versions/nC1d6gOK/Chunky-1.3.52.jar
