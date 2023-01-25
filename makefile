@@ -12,3 +12,6 @@ rimraf: clear
 
 nomad: clear
 	nomad agent -dev
+
+lint: clear
+	nomad job validate purpur.hcl
