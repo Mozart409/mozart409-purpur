@@ -1,7 +1,7 @@
 job "purpur" {
+ datacenters=["dc1"]
 
-
-  group "pupur" {
+  group "purpur" {
     count = 1
 
     network {

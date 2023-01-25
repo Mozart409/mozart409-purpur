@@ -14,4 +14,4 @@ nomad: clear
 	nomad agent -dev
 
 lint: clear
-	nomad job validate purpur.hcl
+	nomad job validate mc-purpur
