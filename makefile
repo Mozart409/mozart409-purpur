@@ -9,3 +9,6 @@ server: clear
 
 rimraf: clear
 	scripts/rimraf.sh
+
+nomad: clear
+	nomad agent -dev
