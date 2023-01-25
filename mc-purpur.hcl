@@ -15,7 +15,18 @@ job "mc-purpur" {
       }
     }
 
-    task "server" {
+  service {
+      name = "purpur"
+      port = "game"
+
+      check {
+        type     = "tcp"
+        interval = "10s"
+        timeout  = "2s"
+      }
+    }
+
+  task "server" {
      driver = "java"
 
   config {

@@ -11,7 +11,7 @@ rimraf: clear
 	scripts/rimraf.sh
 
 nomad: clear
-	nomad agent -dev
+	sudo nomad agent -dev -bind 0.0.0.0
 
 lint: clear
-	nomad job validate mc-purpur
+	nomad job validate mc-purpur.hcl
